@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.vivequilo.qcall_lib.peerKt.QVideoRenderer
+        android:id="@+id/remote_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/local_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.vivequilo.qcall_lib.peerKt.QVideoRenderer
+        android:id="@+id/local_view"
+        android:layout_width="100dp"
+        android:layout_height="190dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/call_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/call_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+    <Button
+        android:id="@+id/mutebtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MUTE"
+        app:layout_constraintBottom_toTopOf="@+id/call_button"
+        app:layout_constraintEnd_toEndOf="@+id/camerabtn"
+        app:layout_constraintStart_toStartOf="@+id/camerabtn" />
+
+    <Button
+        android:id="@+id/camerabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="32dp"
+        android:text="toggleCamera"
+        app:layout_constraintBottom_toTopOf="@+id/mutebtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/speakerbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="SetSpeaker"
+        app:layout_constraintBottom_toTopOf="@+id/camerabtn"
+        app:layout_constraintEnd_toEndOf="@+id/camerabtn"
+        app:layout_constraintStart_toStartOf="@+id/camerabtn" />
+
+    <Button
+        android:id="@+id/flip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="flipcamera"
+        app:layout_constraintBottom_toTopOf="@+id/speakerbtn"
+        app:layout_constraintEnd_toEndOf="@+id/speakerbtn"
+        app:layout_constraintStart_toStartOf="@+id/speakerbtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
