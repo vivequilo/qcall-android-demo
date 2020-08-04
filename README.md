@@ -173,6 +173,19 @@ setVideoCaptureConstraint | `constraint: VideoCapturerConstraint` | Sets the vid
 setDataConnectionListener | `listener: DataConnectionListener` | Sets the dataConnectionListener to the room. This listener handles the connection events.
 build | | Returns the Room instance
 
+## QVideoRenderer
+
+**Functions** 👾
+Name | Parameters | Description
+--- | --- | ---
+setVideoTrack | `track: QVideoTrack?` | Sets the video track
+clearImage |  | Clears the image of the surface view
+init | `base: QEglBase` | Sets the metadata to the room.
+setEnableHardwareScaler | | Makes the renderer faster. Might be buggy in older versions
+setMirror | `mirror: Boolean` | Sets if the output should be mirrored.
+removeCurrentTrack | | Removes the current track in the surface and cleans image
+pauseVideo | | Pauses the video.
+setScalingType | `scalingType: ScalingType?` | Sets the scaling type of the video in the surface.
 
 ## Observers 🔬
 
