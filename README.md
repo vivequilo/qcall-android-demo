@@ -33,7 +33,7 @@ kotlinOptions {
 
 In the same **app module**  build.gradle file add the following in dependencies
 ```gradle
-def qcall_version = '0.0.1' 
+def qcall_version = '1.0.2' 
 dependencies {
 	implementation "com.github.vivequilo:qcall-android:$qcall_version"
 }
